@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleBroadcastReceiver</string>
+    <string name="title">Send/Receive Broadcast Message</string>
+    <string name="btnText">Send Message</string>
+</resources>
