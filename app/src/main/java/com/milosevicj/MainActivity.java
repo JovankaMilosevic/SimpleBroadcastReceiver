@@ -17,21 +17,19 @@ import com.milosevicj.MyReceiver;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static Button btnBroadcast;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnBroadcast = (Button)findViewById(R.id.btnBroadcast);
+        Button btnBroadcast = (Button)findViewById(R.id.btnBroadcast);
 
 
         btnBroadcast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 changeBtnColor(view);
-                sendBroadcast(view);
+                sendNewBroadcast(view);
             }
         });
 
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ((Button)view).setTextColor(Color.BLACK);
     }
 
-    public void sendBroadcast(View view){
+    public void sendNewBroadcast(View view){
         Intent intent = new Intent(this, MyReceiver.class);
         intent.setAction("com.milosevicj.broadcastMessage");
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
