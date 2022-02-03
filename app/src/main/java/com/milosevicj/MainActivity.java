@@ -17,12 +17,14 @@ import com.milosevicj.MyReceiver;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnBroadcast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnBroadcast = (Button)findViewById(R.id.btnBroadcast);
+       btnBroadcast = (Button)findViewById(R.id.btnBroadcast);
 
 
         btnBroadcast.setOnClickListener(new View.OnClickListener() {
